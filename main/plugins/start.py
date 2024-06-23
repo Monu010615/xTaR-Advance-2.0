@@ -30,7 +30,7 @@ import subprocess
 # OWNER_ID = 7065117445 # edit this
 # LOG_GROUP = -1001878947221 # edit this
 
-MDB = "mongodb+srv://monu010615:ggoDbgN8BIYR9bnT@cluster0.kfcw33e.mongodb.net/"
+MDB = "mongodb+srv://ggn:ggn@ggn.upuljx5.mongodb.net/?retryWrites=true&w=majority&appName=ggn"
 MONGODB_CONNECTION_STRING = config("MONGODB", default=MDB)
 # MongoDB database name and collection name
 DB_NAME = "start_users"
@@ -65,8 +65,8 @@ async def start(event):
     collection.update_one({"user_id": user_id}, {"$set": {"user_id": user_id}}, upsert=True)
     # Creating inline keyboard with one button
     buttons = [
-        [Button.url("Join Channel", url="https://t.me/xTaR_Main")],
-        [Button.url("Contact Me", url="@The_real_xTaR")],
+        [Button.url("Join Channel", url="https://t.me/devggn")],
+        [Button.url("Contact Me", url="https://t.me/ggnhere")],
     ]
     # Sending photo with caption and buttons
     await gagan.send_file(
@@ -171,7 +171,7 @@ async def remove_thumbnail(event):
 M = "/plan"
 PREMIUM_PIC = "plan.png"
 PRE_TEXT = """💰 **Premium Price**: Starting from $2 or 200 INR accepted via **__Amazon Gift Card__** (terms and conditions apply).
-📥 **Download Limit**: Users can download up to 1000 files in a single batch command.
+📥 **Download Limit**: Users can download up to 100 files in a single batch command.
 🛑 **Batch**: You will get two modes /bulk and /batch.
    - Users are advised to wait for the process to automatically cancel before proceeding with any downloads or uploads.\n
 📜 **Terms and Conditions**: For further details and complete terms and conditions, please send /terms.
@@ -181,7 +181,7 @@ PRE_TEXT = """💰 **Premium Price**: Starting from $2 or 200 INR accepted via *
 async def plan_command(event):
     # Creating inline keyboard with buttons
     buttons = [
-        [Button.url("Send Gift Card Code", url="@The_real_xTaR")]
+        [Button.url("Send Gift Card Code", url="https://t.me/ttonehelpbot")]
     ]
 
     # Sending photo with caption and buttons
@@ -204,8 +204,8 @@ TERM_TEXT = """📜 **Terms and Conditions** 📜\n
 async def term_command(event):
     # Creating inline keyboard with buttons
     buttons = [
-        [Button.url("Query?", url="@The_real_xTaR"),
-         Button.url("Channel", url="https://t.me/xTaR_Main")]
+        [Button.url("Query?", url="https://t.me/ttonehelpbot"),
+         Button.url("Channel", url="https://telegram.dog/devggn")]
     ]
 
     # Sending photo with caption and buttons
@@ -354,7 +354,7 @@ async def youtube_dl_command(_, message):
 
             # Get video metadata
             metadata = video_metadata(original_file)
-            caption = f"{video_info['title']}\n\n__**Powered by [꧁༺ȶɦɛ ʊռӄռօառ ֆȶǟʀ༻꧂](https://t.me/xTaR_Main)**__"  # Set caption to the title of the video
+            caption = f"{video_info['title']}\n\n__**Powered by [Advance Content Saver Bot](https://t.me/advance_content_saver_bot)**__"  # Set caption to the title of the video
             
             # Send the video file and thumbnail
             ggn = message.chat.id
